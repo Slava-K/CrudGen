@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<Model>
+    <name>Book</name>
+    <shortName>Book</shortName>
+
+    <types>
+        <type name="Integer" shortName="Integer" dbType="integer" javaType="int"/>
+        <type name="String(100)" shortName="String" dbType="varchar(100)" javaType="String"/>
+    </types>
+
+    <requisites>
+        <requisite name="ID" shortName="id" type="Integer"/>
+        <requisite name="Title" shortName="title" type="String"/>
+        <requisite name="Author" shortName="author" type="String"/>
+    </requisites>
+
+    <operations>
+        <operation name="Save book" shortName="saveBook" operationType="Simple" returnType="">
+            <parameters>
+                <parametr name="Book" shortName="book" type="Book"/>
+            </parameters>
+        </operation>
+        <operation name="Delete book" shortName="deleteBook" operationType="Simple" returnType="">
+            <parameters>
+                <parametr name="ID" shortName="id" type="Integer"/>
+            </parameters>
+        </operation>
+        <operation name="Get book by id" shortName="getById" operationType="Simple" returnType="Book">
+            <parameters>
+                <parametr name="ID" shortName="id" type="Integer"/>
+            </parameters>
+        </operation>
+        <operation name="Get all" shortName="getAllBooks" operationType="Simple" returnType="List<Book>">
+
+        </operation>
+    </operations>
+
+</Model>

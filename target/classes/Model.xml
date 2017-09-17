@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<Model>
+    <name>Book</name>
+    <shortName>Book</shortName>
+
+    <types>
+        <type name="Integer" shortName="Integer" dbType="integer" javaType="int"/>
+        <type name="String(100)" shortName="String" dbType="varchar(100)" javaType="String"/>
+    </types>
+
+    <requisites>
+        <requisite name="ID" shortName="id" type="Integer"/>
+        <requisite name="Title" shortName="title" type="String"/>
+        <requisite name="Author" shortName="author" type="String"/>
+    </requisites>
+
+</Model>
